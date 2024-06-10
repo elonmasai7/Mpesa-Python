@@ -49,7 +49,7 @@ class MpesaStkPushTestCase(TestCase):
 
 		with self.assertRaises(MpesaInvalidParameterException):
 			phone_number = config('LNM_PHONE_NUMBER')
-			amount = 1000000
+			amount = 10
 			account_reference = 'reference'
 			transaction_desc = ''
 			self.cl.stk_push(phone_number, amount, account_reference, transaction_desc, self.callback_url)
@@ -60,7 +60,7 @@ class MpesaStkPushTestCase(TestCase):
 		'''
 
 		with self.assertRaises(MpesaInvalidParameterException):
-			phone_number = config('LNM_PHONE_NUMBER')
+			phone_number = config('0794191911')
 			amount = 1.5
 			account_reference = 'reference'
 			transaction_desc = 'Description'
